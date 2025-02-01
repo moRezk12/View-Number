@@ -1,0 +1,13 @@
+<div data-aos="fade-down" class="model">
+  <button  (click)="openModel($event)">
+    {{'btnmodel.openmodel' | translate}}
+  </button>
+</div>
+<div class="modal-container" [class.show]="openmodel" >
+  <div class="modal-content" >
+    <app-header (closeModel)="handleCloseModel($event)"></app-header>
+    <app-details></app-details>
+    <app-table [tableData]="tableData" ></app-table>
+    <app-footer></app-footer>
+  </div>
+</div>

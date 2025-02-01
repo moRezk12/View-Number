@@ -1,0 +1,29 @@
+<section  class="footer">
+  <div class="row">
+    <div  class="row">
+      <div class="image" >
+        <img src="assets/Images/person.jpg" alt="Image Person">
+      </div>
+      <div
+      [ngStyle]="{
+        'text-align' : isRtl() ? 'right' : 'left'
+      }"
+      class="info" >
+        <p>
+          {{'footer.created_by' | translate}}
+        </p>
+        <h3>
+          {{'footer.name' | translate}}
+        </h3>
+      </div>
+    </div>
+    <div class="data" >
+      <p>
+        {{'footer.creation_date' | translate}}
+      </p>
+      <h3>
+        {{'footer.date_time' | translate}}
+      </h3>
+    </div>
+  </div>
+</section>

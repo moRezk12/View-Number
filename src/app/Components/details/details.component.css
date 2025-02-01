@@ -1,0 +1,148 @@
+.details {
+  margin: 10px 20px ;
+  padding: 12px;
+  border: 1px solid #ECF0F5 ;
+  background-color: white;
+}
+.details .row p  {
+  color: #1C1C28;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: Poppins;
+}
+.details .row .row button  {
+  padding: 6px 16px ;
+  margin: 0px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #48B29A;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500px;
+}
+.details .row  .icon {
+  position: relative;
+}
+.details .row .icon .edit:dir(rtl) {
+  background-color: #FFFFFF;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 1px 2px 0px #ABBED14D;
+  border-radius: 4px;
+  padding: 6px;
+  gap: 2px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 123px;
+  z-index: 2;
+}
+.details .row .icon .edit:dir(ltr) {
+  background-color: #FFFFFF;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 1px 2px 0px #ABBED14D;
+  border-radius: 4px;
+  padding: 6px;
+  gap: 2px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 160px;
+  z-index: 2;
+}
+.details .row .icon .edit p {
+  color: #1C1C28;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+.details .row .icon .edit p:hover ,
+.details .row .icon .edit p:hover i {
+  color: #3E97FF;
+}
+.details .row .icon .edit .cancel:hover ,
+.details .row .icon .edit .cancel:hover i {
+  color: #e09296 ;
+}
+.details .row .icon .edit .cancel {
+  color: #FF4B55 ;
+}
+.details .row .icon .edit .cancel i{
+  color: #FF4B55;
+}
+.details .row .icon .edit i:first-child{
+  color: #6B7280;
+}
+
+.details .row .icon .edit i {
+  margin: 0px 10px;
+}
+.details .row  .icon .icon-button {
+  border: none;
+  color: #6B7280;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.details .row  .icon .icon-button:hover {
+  color: #3E97FF;
+}
+
+.details .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 20px 0px 10px;
+}
+.details .grid .info > div:first-child {
+  margin-bottom: 15px;
+}
+.details .grid .info > div {
+  text-align: center;
+  line-height: 16.74px;
+}
+.details .grid .info > div p {
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.details .grid .info > div h3 {
+  color: #1C1C28;
+  font-size: 14px;
+  font-weight: 500;
+}
+.details .grid .info > div .rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.details .grid .info > div .flag {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .details .row p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .details .grid .info > div p {
+    font-size: 12px;
+  }
+  .details .grid .info > div h3 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,35 @@
+<section>
+  <div class="row">
+    <div class="row">
+      <h3>{{ 'pagination.show' | translate }}</h3>
+      <select [(ngModel)]="itemsPerPage" (change)="onPageChange(currentPage)">
+        <option [value]="itemsPerPage">{{ itemsPerPage }}</option>
+      </select>
+
+      <h3>
+        {{ 'pagination.from_of' | translate }}<span>{{ totalItems }}</span>
+      </h3>
+    </div>
+
+    <div class="pagination">
+      <i
+      [style.transform]="!isRtl() ? 'rotate(180deg)' : ''"
+      class="fas fa-chevron-right" (click)="onPageChange(currentPage + 1)"></i>
+      <div class="numbers">
+        <button
+          *ngFor="let page of pages; let i = index"
+          [ngClass]="{ active: currentPage === page }"
+          (click)="onPageChange(page)"
+          class="number"
+        >
+          {{ page }}
+        </button>
+      </div>
+      <i
+      [style.transform]="!isRtl() ? 'rotate(180deg)' : ''"
+      class="fas fa-chevron-left" (click)="onPageChange(currentPage - 1)"></i>
+    </div>
+
+  </div>
+</section>
+

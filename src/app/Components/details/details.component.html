@@ -1,0 +1,105 @@
+<section class="details" >
+  <div class="row" >
+    <div class="row" >
+      <p>
+        012345678910
+      </p>
+      <button>
+        {{'details.in_use' | translate}}
+      </button>
+    </div>
+    <div class="icon" >
+      <button class="icon-button" (click)="showedit()" >
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+      <div *ngIf="edit" class="edit" >
+        <p>
+          <i class="fas fa-pen"></i>
+          {{'details.edit_number' | translate}}
+        </p>
+        <p class="cancel" >
+          <i class="fas fa-ban"></i>
+          {{'details.cancel_assignment' | translate}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="grid" >
+    <div data-aos="fade-right" data-aos-duration="2000" class="info" >
+      <div>
+        <p>
+          {{'details.protocol_name' | translate}}
+        </p>
+        <h3>
+          {{'details.vodafone' | translate}}
+        </h3>
+      </div>
+      <div>
+        <p>
+          {{'details.last_shipment' | translate}}
+        </p>
+        <h3>
+          2024/12/29
+        </h3>
+      </div>
+    </div>
+    <div data-aos="fade-right" data-aos-duration="4000" class="info" >
+      <div>
+        <p>
+          {{'details.country' | translate}}
+        </p>
+        <div class="rows" >
+          <img class="flag" src="assets/Images/flag.jpg" alt="Iamge Flag">
+          <h3>
+            {{'details.saudi' | translate}}
+          </h3>
+
+        </div>
+      </div>
+      <div>
+        <p>
+          {{'details.current_balance' | translate}}
+        </p>
+        <h3>
+          5000 {{'details.coin' | translate}}
+        </h3>
+      </div>
+    </div>
+    <div data-aos="fade-right" data-aos-duration="6000" class="info" >
+      <div>
+        <p>
+          {{'details.client_name' | translate}}
+        </p>
+        <h3 title="{{'details.clients_company' | translate}}" >
+          {{'details.client_company' | translate}}
+        </h3>
+      </div>
+      <div>
+        <p>
+          {{'details.used_balance' | translate}}
+        </p>
+        <h3>
+          5000 {{'details.coin' | translate}}
+        </h3>
+      </div>
+    </div>
+    <div data-aos="fade-right" data-aos-duration="8000" class="info" >
+      <div>
+        <p>
+          {{'details.extensions_count' | translate}}
+        </p>
+        <h3>
+          09
+        </h3>
+      </div>
+      <div>
+        <p>
+          {{'details.total_used_balance' | translate}}
+        </p>
+        <h3>
+          5000 {{'details.coin' | translate}}
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+.row {
+  display: flex;
+}
+
+.row h3 {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13.2px;
+  color: #333333;
+}
+.row select {
+  border: 1px solid #EFEFEF;
+  border-radius: 2px;
+  padding: 7px 8px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 0px 10px;
+  color: #333333;
+  outline: none;
+}
+.row h3 span {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 0px 10px;
+  color: #333333;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination i {
+  cursor: pointer;
+}
+
+
+
+.numbers {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.number {
+  padding: 8px 12px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.number.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.number:hover:not(.active) {
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 480px) {
+  .pagination ,
+  .numbers {
+    gap: 2px;
+  }
+  .number {
+    padding: 4px 8px;
+  }
+  .row h3  {
+    font-size: 9px;
+  }
+}
+

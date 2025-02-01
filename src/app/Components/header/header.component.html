@@ -1,0 +1,21 @@
+<section  class="header">
+  <div class="row">
+    <div class="row" >
+      <h2 >
+        <span>#</span>
+        {{'header.shownumber' | translate}}
+      </h2>
+      <!-- language -->
+      <div (click)="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" class="language">
+        <button class="">
+          {{currentLang === 'ar' ? 'EN' : 'AR'}}
+        </button>
+      </div>
+    </div>
+    <div class="close" >
+      <button class="icon-button" (click)="closeModels()" >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+<section class="table">
+  <div>
+    <table>
+      <thead>
+        <tr>
+            <th
+            *ngFor="let column of tableColumns"
+            [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }">
+              {{ column | translate }}
+            </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of pagedData">
+          <td
+          [ngStyle]="{
+            'border-left': isRtl() ? 'none' : '1px solid #0000001A',
+            'text-align': isRtl() ? 'right' : 'left',
+            'border-right': isRtl() ? '1px solid #0000001A' : 'none',
+            'border-top-left-radius': isRtl() ? '0' : '6px',
+            'border-top-right-radius': isRtl() ? '6px' : '0',
+            'border-bottom-left-radius': isRtl() ? '0' : '6px',
+            'border-bottom-right-radius': isRtl() ? '6px' : '0'
+          }"
+          >{{ row.company }}</td>
+          <td
+          [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }"
+          >{{ row.date }}</td>
+          <td [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }"
+          >{{ row.status }}</td>
+          <td [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }"
+          >{{ row.name }}</td>
+          <td [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }"
+          >{{ row.code }}</td>
+          <td [ngStyle]="{ 'text-align': isRtl() ? 'right' : 'left' }"
+          >{{ row.value1 }}</td>
+          <td
+          [ngStyle]="{
+            'border-right': isRtl() ? 'none' : '1px solid #0000001A',
+            'text-align': isRtl() ? 'right' : 'left',
+            'border-left': isRtl() ? '1px solid #0000001A' : 'none',
+            'border-top-right-radius': isRtl() ? '0' : '6px',
+            'border-top-left-radius': isRtl() ? '6px' : '0',
+            'border-bottom-right-radius': isRtl() ? '0' : '6px',
+            'border-bottom-left-radius': isRtl() ? '6px' : '0'
+          }"
+          >{{ row.value2 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div  class="pagination">
+    <app-pagination
+      [totalItems]="tableData.length"
+      [currentPage]="currentPage"
+      [itemsPerPage]="itemsPerPage"
+      (pageChanged)="onPageChange($event)"
+    ></app-pagination>
+  </div>
+</section>
